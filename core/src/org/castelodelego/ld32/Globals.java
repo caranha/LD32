@@ -6,6 +6,7 @@ import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
 
 /**
@@ -21,6 +22,7 @@ public class Globals {
 	public static AssetManager manager;
 	public static AnimationManager animman;
 	public static SpriteBatch batch;
+    public static ShapeRenderer shaper;
 	public static Random dice;
 		
 	public static BitmapFont debugtext;
@@ -33,7 +35,10 @@ public class Globals {
 		batch = new SpriteBatch();
 		animman = new AnimationManager();
 		manager = new AssetManager();
-		
-		dice = new Random();
+		shaper = new ShapeRenderer();
+        shaper.setAutoShapeType(true);
+
+
+        dice = new Random();
 	}		
 }
